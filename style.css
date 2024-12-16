@@ -1,0 +1,218 @@
+/* Жалпы фон жана сайттын стили */
+body {
+    background-color: white;
+   
+    color: #ddd;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Навигациянын стили */
+header {
+    text-align: center;
+    padding: 1rem;
+    background-color: skyblue;
+    color: #fff;
+}
+
+nav {
+    margin: 1rem 0;
+}
+
+.nav-btn {
+    color: green;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    padding: 0.8rem 1.5rem;
+    border: 3px solid #07d111;
+    background: none;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-btn:hover {
+    color: #fff;
+    background-color: #07d111;
+}
+
+/* Секциялардын стили */
+.section {
+    display: none;
+    padding: 2rem;
+}
+
+.section.active {
+    display: block;
+}
+
+/* Мугалимдердин карталары */
+.teacher-card {
+    background-color: #282828;
+    border: 3px solid #07d111;
+    margin: 1rem 0;
+    padding: 1.5rem;
+    color: #fff;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.teacher-card:hover {
+    background-color: #444;
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+
+/* Байланыш формасы */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 2px solid #07d111;
+    border-radius: 5px;
+    background-color: #222;
+    color: #ddd;
+}
+
+form button {
+    padding: 0.8rem;
+    border: none;
+    background-color: #07d111;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #05a30d;
+}
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.gallery {
+    display: flex;
+    justify-content: space-between; /* Сүрөттөрдүн ортосунда боштук */
+    align-items: center;
+    gap: 1rem; /* Сүрөттөрдүн ортосуна боштук */
+    padding: 1rem;
+}
+
+.gallery__item {
+    position: relative;
+    width: calc((100% - 6rem) / 5); /* Беш сүрөт баткыдай туурасын эсептейт */
+    aspect-ratio: 5 / 4; /* Туурасы менен бийиктигинин пропорциясын сактайт */
+    overflow: hidden;
+}
+
+.gallery__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Сүрөттү туура кесүү */
+    transition: transform 0.3s ease;
+    z-index: 1; /* Сүрөт тексттин үстүндө калат */
+}
+
+.gallery__text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Тексттин артындагы тунук фон */
+    color: white;
+    font-size: 0.5rem; /* Тексттин өлчөмү */
+    text-align: center;
+    padding: 0.8rem 0;
+    transition: opacity 0.3s ease;
+    opacity: 1;
+    z-index: 2; /* Текст сүрөттөн жогору болот */
+}
+
+.gallery__item:hover .gallery__text {
+    opacity: 0;
+}
+
+.gallery__item:hover .gallery__image {
+    transform: scale(1.1); /* Мышык жакындаганда чоңойтот */
+}
+.bash {
+    padding: 1rem;
+    max-width: 100%;
+}
+
+.bash__item {
+    overflow: hidden; /* Сүрөт жана тексттин сырткы четин сактоо үчүн */
+}
+
+.bash__image {
+    float: left; /* Сүрөттү сол жакка такап жайгаштырат */
+    margin-right: 1rem; /* Текст менен сүрөттүн ортосундагы боштук */
+    width: 12%; /* Сүрөттүн туурасы */
+    height: auto; /* Сүрөттүн пропорциясын сактайт */
+}
+
+.bash__text {
+    font-size: 2rem; /* Тексттин өлчөмү */
+    line-height: 1.5; /* Тексттин арасындагы аралык */
+    color: #333; /* Тексттин түсү */
+}
+
+#contact {
+    text-align: right; /* Текстти оң жакка жайгаштыруу */
+    margin-right: 20px; /* Оң жактан кошумча боштук */
+    padding: 1rem;
+}
+
+#contact ul {
+    list-style-type: none; /* Тизмедеги маркерлерди алып салуу */
+    padding: 0;
+}
+
+#contact li {
+    margin-bottom: 10px; /* Тизмедеги элементтердин ортосундагы аралык */
+}
+/* Стильдер жеке тизмеге гана таасир этет */
+#gruppa .custom-list {
+    list-style-type: none; /* Маркерлерди алып салуу */
+    padding: 0;
+    margin: 0;
+}
+
+#gruppa .custom-list li {
+    margin-bottom: 10px; /* Ар бир элементтин ортосундагы аралык */
+}
+
+#gruppa .custom-list a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none; /* Асты сызыгын алып салуу */
+    color: #4CAF50; /* Тексттин түсү */
+    font-size: 1.1em; /* Шрифттин чоңдугу */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#gruppa .custom-list a:hover {
+    background-color: #4CAF50; /* Шилтемеге курсорду алып келгенде фон түсү */
+    color: #fff; /* Шилтемедеги тексттин түсү */
+}
+
+#gruppa .custom-list a:active {
+    background-color: #45a049; /* Шилтемени басканда фон түсү */
+}
+
+
